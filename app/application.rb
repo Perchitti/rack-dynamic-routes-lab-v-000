@@ -9,7 +9,7 @@ class Application
       item = @@items.find {|i| i.name == item_name}
       if !item.nil?
         resp.write item.price
-      resp.write "You requested item: #{price}"
+        resp.status = 200
     else
       resp.write "Route not found"
       resp.status = 404

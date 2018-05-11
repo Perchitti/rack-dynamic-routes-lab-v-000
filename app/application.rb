@@ -10,6 +10,7 @@ class Application
       if !item.nil?
         resp.write item.price
         resp.status = 200
+      end
     else
       resp.write "Route not found"
       resp.status = 404
